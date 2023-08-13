@@ -21,7 +21,7 @@ timeline:
 schedule:
   - name: Monday
   - name: Tuesday
-     events:
+    events:
       - name: Lecture (YH)
         start: 1:00 PM
         end: 1:45 PM
@@ -30,7 +30,7 @@ schedule:
         start: 2:00 PM
         end: 4:00 PM
         location: A2-82.01 opgang 6
- - name: Wednesday
+  - name: Wednesday
     events:
       - name: Lecture (FMP&YH)
         start: 1:00 PM

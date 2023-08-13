@@ -8,17 +8,17 @@ description: A listing of all the course staff members.
 
 ## Course Instructor
 
-{% assign instructors = site.staffers | where: 'role', 'Instructor' %}
-{% for staffer in instructors %}
+{% assign course_instructors = site.staffers | where: 'role', 'Course Instructor' %}
+{% for staffer in course_instructors %}
 {{ staffer }}
 {% endfor %}
 
-{% assign teaching_assistants = site.staffers | where: 'role', 'Teaching Assistant' %}
-{% assign num_teaching_assistants = teaching_assistants | size %}
-{% if num_teaching_assistants != 0 %}
+{% assign lesson_teacher = site.staffers | where: 'role', 'Lesson Teacher' %}
+{% assign num_lesson_teacher = lesson_teacher | size %}
+{% if num_lesson_teacher != 0 %}
 ## Lesson Teacher
 
-{% for staffer in teaching_assistants %}
+{% for staffer in lesson_teacher %}
 {{ staffer }}
 {% endfor %}
 {% endif %}

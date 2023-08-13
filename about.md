@@ -18,7 +18,7 @@ description: >-
 
 ## About
 
-This website is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GENERATION DNA SEQUENCING - 2023" (MAC) at the University of Copenhagen. It covers the data analysis session:
+This website is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GENERATION DNA SEQUENCING - 2023" (MAC) at the University of Copenhagen. It covers two data analysis session:
 
 1) ONT 16S rRNA amplicon sequencing data analysis
 
