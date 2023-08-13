@@ -5,5 +5,3 @@ This repository is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GEN
 **The course GitHub pages**: https://yanhui09.github.io/MAC2023
 
 **Exercise resources**: https://github.com/yanhui09/MAC2023-extra
-
-test
