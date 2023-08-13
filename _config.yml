@@ -14,10 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: MAC2023
-tagline: A Jekyll template for course websites
-description: A modern, highly customizable, responsive Jekyll template for course websites
-author: Kevin Lin
-baseurl: '/MAC2023_site' # the subpath of your site, e.g. /blog
+tagline: MAC2023 at KU
+description: seqeuncing data analysis lessons for MAC2023
+author: Yan Hui 
+baseurl: '/MAC2023' # the subpath of your site, e.g. /blog
 url: 'https://yanhui09.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
