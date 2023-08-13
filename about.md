@@ -28,4 +28,4 @@ This website is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GENERA
 
 **Aug 22 (Tue)**: [ONT 16S rRNA amplicon analysis](#)
 
-**Aug 23 (Wed)**: [WGS analysis]()
+**Aug 23 (Wed)**: [WGS analysis](#)

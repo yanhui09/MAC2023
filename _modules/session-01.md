@@ -2,7 +2,7 @@
 title: ONT 16S rRNA gene amplicon analysis with LACA and NART
 ---
 
-Aug 22 (Tue)
+Aug 22
 : **Exercise**{: .label .label-purple }[LACA](#)
 : [[instruction]](#)
 : [[colab]](#)
