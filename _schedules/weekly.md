@@ -24,7 +24,7 @@ schedule:
     events:
       - name: Lecture (YH)
         start: 1:00 PM
-        end: 2:00 PM
+        end: 1:45 PM
         location: A2-82.01 opgang 6
       - name: Exercise (YH)
         start: 2:00 PM
@@ -34,7 +34,7 @@ schedule:
     events:
       - name: Lecture (FMP&YH)
         start: 1:00 PM
-        end: 2:00 PM
+        end: 1:45 PM
         location: A2-82.01 opgang 6
       - name: Exercise (FMP&YH)
         start: 2:00 PM
