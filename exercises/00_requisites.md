@@ -11,18 +11,18 @@ nav_order: 1
 
 ---
 
-# Requirements
+## Requirements
 
-## Conda & Mamba
+### Conda & Mamba
 
 To speed up the analysis, `mamba` is introduced as a fast alternative for `conda`.
 
-## Exercise data
+### Exercise data
 
 Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https://github.com/yanhui09/MAC2023-extra).
 
-# Optional tools
+## Optional tools
 
-## Git
+### Git
 
-## Snakemake
+### Snakemake
