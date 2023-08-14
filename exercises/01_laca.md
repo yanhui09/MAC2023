@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Requisites
+title: LACA
 permalink: /exercieses/laca
 parent: Exercises
+has_toc: true
 nav_order: 2
 ---
 

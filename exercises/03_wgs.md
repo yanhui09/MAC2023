@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Requisites
+title: WGS
 permalink: /exercieses/wgs
 parent: Exercises
+has_toc: true
 nav_order: 4
 ---
 

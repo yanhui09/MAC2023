@@ -3,6 +3,7 @@ layout: page
 title: Requisites
 permalink: /exercieses/requisites
 parent: Exercises
+has_toc: true
 nav_order: 1
 ---
 
