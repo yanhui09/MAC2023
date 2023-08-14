@@ -32,14 +32,14 @@ aux_links:
     - 'https://www.yanh.org'
   MAC2023 on GitHub:
     - 'https://github.com/yanhui09/MAC2023'
-footer_content:
+footer_content: "&copy; 2023 Yan Hui. Released under the <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a> license"
 
 # Collections for website data
 collections:
   staffers:
   modules:
   schedules:
-  announcements:
+#  announcements:
 # Default layouts for each collection type
 defaults:
   - scope:
