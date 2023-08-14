@@ -6,19 +6,21 @@ parent: Exercises
 nav_order: 3
 ---
 
-## NART
+1. TOC
+{:toc}
+
+---
+
+## Use `NART` for long nosiy amplicon profile by read classification
 
 [`NART`](https://github.com/yanhui09/nart) is desgined for mapping-based Nanopore Amplicon (**Real-Time**) analysis, e.g., 16S rRNA gene.
 `NART` utils are composed of `nart` (Nanopore Amplicon Real-Time entry) and `nawf` (Nanopore Amplicon `snakemake` WorkFlow entry) in one python package.
 `NART` provides an (real-time) end-to-end solution from bascecalled reads to the final count matrix through mapping-based strategy. You can 
 
 `nawf` provide three options (i.e., `emu`, `minimap2lca` and `blast2lca`) to determine microbial composition.
-![dag](https://github.com/yanhui09/nart/blob/main/nart/workflow/resources/dag.png)
+![dag](./assets/02_nart/dag.png)
 
-1. TOC
-{:toc}
-
-# NART installation
+## NART installation
 
 The full installation guide of `NART` is available [here](https://github.com/yanhui09/nart#installation).
 
@@ -37,14 +39,14 @@ conda activate nart
 pip install --editable .
 ```
 
-# A demo run with NART
+## A demo run with NART
 
 Find a full usage guide [here](https://github.com/yanhui09/nart#usage).
 
 A video tutorial can be found [here](https://www.youtube.com/watch?v=TkdJGLOscPg).
 
-## Example with a quick start
-### Amplicon analysis in single batch
+### Example with a quick start
+#### Amplicon analysis in single batch
 `nawf` can be used to profile any single basecalled `fastq` file from a Nanopore run or batch.
 ```
 conda activate nart                                            # activate required environment 
@@ -52,7 +54,7 @@ nawf config -b /path/to/basecall_fastq -d /path/to/database    # init config fil
 nawf run all                                                   # start analysis
 ```
 
-### Real-time analysis
+#### Real-time analysis
 `nart` provide utils to record, process and profile the continuously generated `fastq` batch.
 
 Before starting real-time analysis, you need `nawf` to configure the workflow according to your needs. 
@@ -75,7 +77,7 @@ nart run -t 10                                                 # real-time proce
 nart visual                                                    # interactive visualization
 ```
 
-## Get familiar with `NART` usage
+### Get familiar with `NART` usage
 
 `NART` is composed of two sets of scripts: `nart` and `nawf`, which controls real-time analysis and workflow performance, respectively.
 
@@ -91,7 +93,7 @@ nart run -h
 nart visual -h
 ```
 
-## Run `NART` with a demo datset
+### Run `NART` with a demo datset
 
 0. Make sure you have downlowded the required demo dataset from [here](https://github.com/yanhui09/MAC2023-extra). And the enter the directory with `cd`. 
 

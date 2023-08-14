@@ -7,40 +7,41 @@ has_toc: true
 nav_order: 4
 ---
 
-**WGS**
-
 1. TOC
 {:toc}
 
-# Install required software with `mamba` or `conda`
+---
+## Genome assembly with 2nd and 3rd WGS data
 
-# Exporatio with a demo data
+## Install required software with `mamba` or `conda`
 
-## Genome assembly with Illumina reads
+## Exporatio with a demo data
 
-### Adapter removal with `trimmomatic`
+### Genome assembly with Illumina reads
 
-### Quality control with `seqkit`
+#### Adapter removal with `trimmomatic`
 
-### Genome assembly with `spades`  
+#### Quality control with `seqkit`
 
-## Genome assembly with Nanopore reads
+#### Genome assembly with `spades`  
 
-### Adapter removal with `guppy` or `porechop`
+### Genome assembly with Nanopore reads
 
-### Quality control with `seqkit`
+#### Adapter removal with `guppy` or `porechop`
 
-### Genome assembly with `flye`
+#### Quality control with `seqkit`
 
-### Genome polishing with `racon` and `medaka`
+#### Genome assembly with `flye`
 
-### Genome polishing with illumina reads
+#### Genome polishing with `racon` and `medaka`
 
-## Quality assessment of assembled genomes with `quast`
+#### Genome polishing with illumina reads
 
-## Optional: Genome annotation with `prokka`
+### Quality assessment of assembled genomes with `quast`
 
-## Optional: Frameshift correction with `proovframe`
+### Optional: Genome annotation with `prokka`
+
+### Optional: Frameshift correction with `proovframe`
 
 
 
