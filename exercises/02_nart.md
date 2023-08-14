@@ -159,7 +159,7 @@ you can try the interactive visualization below.
 
 **2.4.** Interactive visualization in a browser (requiring a new terminal)
 ```
-nart visual
+nart visual -i ./nart_output
 ```
 
 Open the generated link in your browser. And you are expected to see

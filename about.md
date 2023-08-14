@@ -15,3 +15,5 @@ This website is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GENERA
 1) ONT 16S rRNA amplicon sequencing data analysis
 
 2) WGS data analysis with Nanopore and Illumina sequencing data
+
+As most bioinformatic software only have `linux` distribution, a `Linux` environment is recommended.

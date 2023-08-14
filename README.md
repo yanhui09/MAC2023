@@ -5,6 +5,9 @@ This repository is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GEN
 **The course GitHub pages**: [https://yanhui09.github.io/MAC2023](https://yanhui09.github.io/MAC2023)
 
 **Supplementary materials**: [https://github.com/yanhui09/MAC2023-extra](https://github.com/yanhui09/MAC2023-extra)
+  
+  
+As most bioinformatic software only have `linux` distribution, a `Linux` environment is recommended.
 
 ## Session
 
