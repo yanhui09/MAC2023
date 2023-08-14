@@ -11,7 +11,7 @@ nav_order: 3
 
 ---
 
-## Use `NART` for long nosiy amplicon profile by read classification
+## Use **NART** for long nosiy amplicon profile by read classification
 
 [`NART`](https://github.com/yanhui09/nart) is desgined for mapping-based Nanopore Amplicon (**Real-Time**) analysis, e.g., 16S rRNA gene.
 `NART` utils are composed of `nart` (Nanopore Amplicon Real-Time entry) and `nawf` (Nanopore Amplicon `snakemake` WorkFlow entry) in one python package.
@@ -20,7 +20,7 @@ nav_order: 3
 `nawf` provide three options (i.e., `emu`, `minimap2lca` and `blast2lca`) to determine microbial composition.
 ![dag](./assets/02_nart/dag.png)
 
-## NART installation
+## **NART** installation
 
 The full installation guide of `NART` is available [here](https://github.com/yanhui09/nart#installation).
 
@@ -39,7 +39,7 @@ conda activate nart
 pip install --editable .
 ```
 
-## A demo run with NART
+## A demo run with **NART**
 
 Find a full usage guide [here](https://github.com/yanhui09/nart#usage).
 

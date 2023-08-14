@@ -10,11 +10,11 @@ nav_order: 2
 {:toc}
 
 ---
-## De novo OTU picking from long noisy amplicons with `LACA` 
+## De novo OTU picking from long noisy amplicons with **LACA** 
 
 [`LACA`](https://github.com/yanhui09/laca) is a reproducible and scalable workflow for Long Amplicon Consensus Analysis, e.g., 16S rRNA gene. Using Snakemake as the job controller.
 
-## LACA installation
+## **LACA** installation
 
 The full installation guide of `LACA` is available [here](https://github.com/yanhui09/laca#installation).
 
@@ -36,7 +36,7 @@ conda activate laca
 pip install --editable .
 ```
 
-## A demo run with LACA 
+## A demo run with **LACA**
 
 Find a full usage guide [here](https://github.com/yanhui09/laca#usage).
 
