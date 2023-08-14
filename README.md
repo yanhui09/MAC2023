@@ -8,6 +8,6 @@ This repository is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GEN
 
 ## Session
 
-**Aug 22 (Tue)**: [ONT 16S rRNA amplicon analysis](#)
+**Aug 22 (Tue)**: ONT 16S rRNA amplicon analysis with [LACA](https://yanhui09.github.io/MAC2023/exercieses/laca) and [NART](https://yanhui09.github.io/MAC2023/exercieses/nart)
 
-**Aug 23 (Wed)**: [WGS analysis](#)
+**Aug 23 (Wed)**: [Genome assembly with 2nd and 3rd WGS data](https://yanhui09.github.io/MAC2023/exercieses/wgs)

@@ -20,6 +20,7 @@ author: Yan Hui
 baseurl: '/MAC2023' # the subpath of your site, e.g. /blog
 url: 'https://yanhui09.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+favicon_ico: "/assets/images/favicon.ico"
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.5.4
