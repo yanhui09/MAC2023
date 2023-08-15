@@ -13,21 +13,26 @@ nav_order: 4
 ---
 ## Genome assembly with 2nd and 3rd WGS data
 
-## Install required software with `mamba` or `conda`
+In this session, we aim to assemble a bacterial genome using 2nd and 3rd whole genome sequencing (WGS) data. 
+We will use it this as example to explore the WGS data analysis, and look into the difference between sequencing technologies.
 
-## Exporatio with a demo data
+## Software installation with `mamba` and data acquisition
+
+Here will make 
+
+## Exporation with a demo data
 
 ### Genome assembly with Illumina reads
 
 #### Adapter removal with `trimmomatic`
 
-#### Quality control with `seqkit`
+#### Quality control with `bbmap`
 
 #### Genome assembly with `spades`  
 
 ### Genome assembly with Nanopore reads
 
-#### Adapter removal with `guppy` or `porechop`
+#### Optional: Adapter removal with `guppy` or `porechop`
 
 #### Quality control with `seqkit`
 
@@ -35,7 +40,9 @@ nav_order: 4
 
 #### Genome polishing with `racon` and `medaka`
 
-#### Genome polishing with illumina reads
+#### Illumina reads polishing with `pilon`
+
+#### Optional: hybrid assembly with `unicycler`
 
 ### Quality assessment of assembled genomes with `quast`
 

@@ -44,7 +44,7 @@ bash Mambaforge-Linux-x86_64.sh
 Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https://github.com/yanhui09/MAC2023-extra).
 ![download](./assets/00_requisites/github_download.jpg)
 
-## Optional tools
+## Optional reading
 
 ### Git
 
