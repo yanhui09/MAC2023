@@ -72,10 +72,12 @@ Here is a set of sequencing data from a *Propionibacterium freudenreichii* strai
 We subsampled the sequencing data to 20x coverage for the Illumina and Nanopore reads. 
 The PacBio reference genome is from the [NCBI RefSeq database](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP085641.1). 
 
-*Q1: What is the genome size of this strain? How is the sequencing coverage calculated?*
-
-illumina: 30,200,000*2/2,566,312≈20  
-ONT: 51,201,670/2,566,312≈20
+{: .note-title }
+> Questions
+>*Q1: What is the genome size of this strain? How is the sequencing coverage calculated?*
+>
+>illumina: 30,200,000*2/2,566,312≈20  
+>ONT: 51,201,670/2,566,312≈20
 
 Let's have a look at the quality of the sequencing data with `fastqc`.
 
@@ -85,7 +87,7 @@ fastqc data/wgs/NXT20x_R*.fastq.gz -o ./fastqc/illumina
 fastqc data/wgs/ont_r10_20x.fastq.gz -o ./fastqc/ont_r10
 ```
 
-You can open the html files in the `fastqc` directory to have a look at the quality of the sequencing data.
+You can open the `.html` files in the `fastqc` directory to have a look at the quality of the sequencing data.
 
 **Illumina**
 ![illumina](./assets/03_wgs/read_illumina.png)
@@ -93,7 +95,11 @@ You can open the html files in the `fastqc` directory to have a look at the qual
 **Nanopore**
 ![ont](./assets/03_wgs/read_ont.png)
 
-We could see the ONT reads is way longer but contains more errors than the Illumina reads. 
+{: .important-title }
+> Highlight
+>
+>We could see the ONT read is way longer but contains more errors than the Illumina one. 
+
 
 ### Genome assembly with Illumina reads
 
@@ -108,12 +114,18 @@ trimmomatic PE -threads 4 -phred33 data/wgs/NXT20x_R1.fastq.gz data/wgs/NXT20x_R
 
 #### Reads quality control with `bbmap`
 
+`bbmap` is a set of tools for quality control of sequencing reads. It can be used to remove the duplicated reads and reads from the PhiX control. [[Read more]](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/)
+
 ```
 #clumpify
 clumpify.sh in=illumina/NXT20x_R1_paired.fastq.gz in2=illumina/NXT20x_R2_paired.fastq.gz out=illumina/NXT20x_R1_paired_dedup.fastq.gz out2=illumina/NXT20x_R2_paired_dedup.fastq.gz dedupe optical spany adjacent
 # bbduk
 bbduk.sh in=illumina/NXT20x_R1_paired_dedup.fastq.gz in2=illumina/NXT20x_R2_paired_dedup.fastq.gz out=illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz out2=illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz ref=data/wgs/phiX174.fasta k=31 hdist=1
 ```
+
+`clumpify.sh` is a tool for removing duplicated reads. [[Read more]](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/clumpify-guide/)
+
+`bbduk.sh` is a tool for removing reads from contamination (E.g., host genome, the PhiX control). [[Read more]](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/)
 
 #### Genome assembly with `spades`  
 
