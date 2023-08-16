@@ -12,7 +12,7 @@ nav_order: 4
 
 ---
 ## Genome assembly with 2nd and 3rd WGS data
-
+<br />
 In this session, we aim to assemble a bacterial genome using 2nd and 3rd whole genome sequencing (WGS) data. 
 We will use it this as example to explore the WGS data analysis, and look into the difference between sequencing technologies.
 
@@ -330,6 +330,7 @@ data/wgs/ncbi_pacbio_TL110.fasta                   FASTA   DNA          1  2,566
 
 {: .important }
 > Compared to the reference, the total length of the assemblies are similar. 
+>
 > But the number of sequences (`num_seqs`) and the maximal sequence length (`max_len`) vary a lot. 
 
 Let's chcek the quality of the assemblies with `quast`.
@@ -343,17 +344,31 @@ You can open the `report.html` file in the `quast` directory to have a look at t
 
 {: .important }
 > *Q4: Based on the example, which sequencing technology would you think works better in genome completeness and contiguity?*
+>
 > Check `Genome fraction` and `NGA50`
+>
 > *Q5: Based on the example, which assembly do you think is the best in accuracy?*
+>
 > Check `Misassemblies` and `Mismatches`
+>
 > *Q6: Based on the example, what is the dominant error type in the ONT assembly?*
+>
 > Check `mismatches` and `indels`. [[Read more]](https://genome.sph.umich.edu/wiki/Indel) 
+>
 > *Q7: What would you think is the best assembly strategy for this example?*
 
 ### Optional: Reference-guided correction with `proovframe`
 
 High frequency of `indels` results in frameshifts in the coding sequences (CDSs) of the ONT assembly.
 With reference-guided correction, we can correct the frameshifts in the CDSs of the ONT assembly.
+
+To use the `proovframe` tool, we need to create another conda environment with `mamba` due to the dependency conflict.
+
+```
+conda deactivate
+mamba env create -n wgs2 -f envs/env2.yaml
+conda activate wgs2
+```
 
 #### Genome annotation with `prokka`
 
@@ -401,4 +416,4 @@ Expected assembly file in `MD5` validation:
 ```
 
 {: .important }
-> *Q8: In the previous `quast` report, there's an increase of `N's` in the `hybrid_pilon_proovframe.fasta` assembly. Do you think it's a good idea to use `proovframe` for correction?*
+> *Q8: In the previous `quast` report, there's an increase of `N's` in the `hybrid_pilon_proovframe.fasta` assembly. Do you think it's good or bad?*
