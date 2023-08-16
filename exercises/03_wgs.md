@@ -88,10 +88,10 @@ fastqc data/wgs/ont_r10_20x.fastq.gz -o ./fastqc/ont_r10
 You can open the html files in the `fastqc` directory to have a look at the quality of the sequencing data.
 
 **Illumina**
-![Illumina](./assessts/03_wgs/read_illumina.png)
+![illumina](./assets/03_wgs/read_illumina.png)
 
 **Nanopore**
-![Nanopore](./assessts/03_wgs/read_ont.png)
+![ont](./assets/03_wgs/read_ont.png)
 
 {: .note-note}
 We could see the ONT reads is way longer but contains more errors than the Illumina reads. 
