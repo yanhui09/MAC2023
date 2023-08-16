@@ -74,7 +74,9 @@ The PacBio reference genome is from the [NCBI RefSeq database](https://www.ncbi.
 
 {: .important }
 >*Q1: What is the genome size of this strain? How is the sequencing coverage calculated?*
+>
 >illumina: 30,200,000*2/2,566,312≈20  
+>
 >ONT: 51,201,670/2,566,312≈20
 
 Let's have a look at the quality of the sequencing data with `fastqc`.
@@ -120,6 +122,7 @@ eebcb480e669a92aff310cdecc71afec  illumina/NXT20x_R1_paired.fastq.gz
 
 {: .important }
 > `MD5` validation is a way to check if the file is downloaded correctly. [[Read more]](https://en.wikipedia.org/wiki/MD5) 
+>
 > You can use `md5sum` to check the `MD5` in Linux or `md5` in Mac.
 
 #### Reads quality control with `bbmap`
@@ -160,6 +163,7 @@ Expected assembly file in `MD5` validation:
 
 {: .important }
 > *Q2: We here assembled a bacterial genome from a isolate. What if we have a metagenomic sample?*
+>
 > We can use `--meta` option in `spades` to assemble a metagenomic sample. [[Read more]](https://github.com/ablab/spades#basic-options)
 
 ### Genome assembly with ONT reads
@@ -221,6 +225,7 @@ Expected assembly file in `MD5` validation:
 
 {: .important }
 > *Q3: By default, `flye` is used to assembly genomes. What if we have a metagenomic sample?*
+>
 >  We can use `--meta` option in `flye` to assembly a metagenomic sample. [[Read more]](https://github.com/fenderglass/Flye/blob/flye/docs/USAGE.md#-quick-usage)
 
 
