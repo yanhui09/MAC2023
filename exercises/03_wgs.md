@@ -72,8 +72,8 @@ Here is a set of sequencing data from a *Propionibacterium freudenreichii* strai
 We subsampled the sequencing data to 20x coverage for the Illumina and Nanopore reads. 
 The PacBio reference genome is from the [NCBI RefSeq database](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP085641.1). 
 
-{: .note-question }
 *Q1: What is the genome size of this strain? How is the sequencing coverage calculated?*
+
 illumina: 30,200,000*2/2,566,312≈20  
 ONT: 51,201,670/2,566,312≈20
 
@@ -93,7 +93,6 @@ You can open the html files in the `fastqc` directory to have a look at the qual
 **Nanopore**
 ![ont](./assets/03_wgs/read_ont.png)
 
-{: .note-note }
 We could see the ONT reads is way longer but contains more errors than the Illumina reads. 
 
 ### Genome assembly with Illumina reads
