@@ -100,7 +100,7 @@ You can open the `.html` files in the `fastqc` directory to have a look at the q
 ### Genome assembly with Illumina reads
 
 #### Adapter removal with `trimmomatic`
-
+<br />
 `trimmomatic` is a tool for trimming adapters and low quality reads. [[Read more]](http://www.usadellab.org/cms/?page=trimmomatic)
  
 The illumina reads are collected from the [NextSeq](https://emea.illumina.com/systems/sequencing-platforms/nextseq.html) platform, using the [Nextera](https://emea.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-xt-dna.html) library preparation kit.
@@ -376,7 +376,7 @@ conda activate wgs2
 
 ```
 mkdir proovframe
-source activate wgs2
+conda activate wgs2
 prokka --outdir proovframe/prokka --prefix pacbio --cpus 4 data/wgs/ncbi_pacbio_TL110.fasta
 ```
 
