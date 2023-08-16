@@ -98,9 +98,11 @@ You can open the `.html` files in the `fastqc` directory to have a look at the q
 
 
 ### Genome assembly with Illumina reads
+<br />
 
 #### Adapter removal with `trimmomatic`
 <br />
+
 `trimmomatic` is a tool for trimming adapters and low quality reads. [[Read more]](http://www.usadellab.org/cms/?page=trimmomatic)
  
 The illumina reads are collected from the [NextSeq](https://emea.illumina.com/systems/sequencing-platforms/nextseq.html) platform, using the [Nextera](https://emea.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-xt-dna.html) library preparation kit.
@@ -123,6 +125,7 @@ eebcb480e669a92aff310cdecc71afec  illumina/NXT20x_R1_paired.fastq.gz
 > You can use `md5sum` to check the `MD5` in Linux or `md5` in Mac.
 
 #### Reads quality control with `bbmap`
+<br />
 
 `bbmap` is a set of tools for quality control of sequencing reads. It can be used to remove the duplicated reads and reads from the PhiX control. [[Read more]](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/)
 
@@ -146,6 +149,7 @@ a3e164e4b96954f7fb106fc6f99df37c  illumina/NXT20x_R2_paired_dedup.fastq.gz
 ```
 
 #### Genome assembly with `spades`  
+<br />
 
 `spades` is a genome assembler for short reads. [[Read more]](https://github.com/ablab/spades)
 
@@ -163,8 +167,10 @@ Expected assembly file in `MD5` validation:
 > We can use `--meta` option in `spades` to assemble a metagenomic sample. [[Read more]](https://github.com/ablab/spades#basic-options)
 
 ### Genome assembly with ONT reads
+<br />
 
 #### Optional: Adapter removal with `guppy` or `porechop`
+<br />
 
 `guppy` is a tool for basecalling and adapter trimming of ONT reads. 
 `guppy` is not open-source, thus you need to register an ONT account for documentation and download. [[Read more]](https://id.customers.nanoporetech.com/app/nanoporetech-customers_myaccount_1/exk2kkmfwpBAaT3WI697/sso/saml?RelayState=https://community.nanoporetech.com/downloads)
@@ -185,6 +191,7 @@ porechop -i data/wgs/ont_r10_20x.fastq.gz -o ont_r10/ont_r10_20x_porechop.fastq.
 ```
 
 #### Reads quality control with `seqkit`
+<br />
 
 `seqkit` is a tool for manipulating sequencing data. [[Read more]](https://bioinf.shenwei.me/seqkit/)
 Here we use `seqkit` to remove the short reads and reads with low quality.
@@ -207,6 +214,7 @@ ont_r10/ont_r10_20x_f.fastq.gz  FASTQ   DNA      6,561  48,742,515    2,001  7,4
 ```
 
 #### Genome assembly with `flye`
+<br />
 
 `flye` is a long-read genome assembler, recommended by ONT. [[Read more]](https://github.com/fenderglass/Flye)
 
@@ -225,6 +233,7 @@ Expected assembly file in `MD5` validation:
 
 
 #### Genome polishing with `racon` and `medaka`
+<br />
 
 long-read genome assemblers usually produce a draft genome with high contiguity but low accuracy.
 Extra polishing steps are needed to improve the accuracy of the draft genome.
@@ -275,6 +284,7 @@ Here we choose two commonly adopted strategies for hybrid assembly:
 2. Short-read-first hybrid assembly. `unicycler`
 
 #### Illumina reads polishing with `pilon`
+<br />
 
 `pilon` is a tool for polishing genome assemblies with short reads. [[Read more]](https://github.com/broadinstitute/pilon)
 
@@ -292,6 +302,7 @@ Expected assembly file in `MD5` validation:
 ```
 
 #### Optional: hybrid assembly with `unicycler`
+<br />
 
 `unicycler` can conduct a short-read-first hybrid assembly. [[Read more]](https://github.com/rrwick/Unicycler)
 
@@ -371,6 +382,7 @@ conda activate wgs2
 ```
 
 #### Genome annotation with `prokka`
+<br />
 
 `prokka` is a commonly used tool for rapid annotation of bacterial genomes. [[Read more]](https://github.com/tseemann/prokka)
 
@@ -400,6 +412,7 @@ We have many output files from `prokka`. Here we only use the translated protein
 
 
 #### Frameshift correction with `proovframe`
+<br />
 
 ![frameshift](./assets/03_wgs/frameshift.png)
 
