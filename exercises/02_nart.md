@@ -63,7 +63,7 @@ nawf run all                                                   # start analysis
 Before starting real-time analysis, you need `nawf` to configure the workflow according to your needs. 
 ```
 conda activate nart                                            # activate required environment 
-nawf config -b /path/to/basecall_fastq -d /path/to/database    # init config file and check
+nawf config -d /path/to/database                               # init config file and check
 ```
 
 In common cases, you need three independent sessions to handle monitor, process and visulization, repectively.
@@ -117,7 +117,7 @@ cd ./MAC2023-extra
 **1.1.** Check where you are and try `laca init`, check the genereated `config.yaml` file.
 ```
 pwd
-nawf config -b ./data/ont16s -d ./database -w ./nart_output
+nawf config -b ./data/ont16s/*.fastq.gz -d ./database -w ./nart_output
 cat ./nart_output/config.yaml
 ```
 
@@ -128,8 +128,10 @@ nawf run all -w ./nart_output -n
 
 **2.** Real-time analysis with `nart`
 
-**2.1.** Re-use the `config.yaml` file from `nawf`, and make sure it exists.
+**2.1.** Re-generate the `config.yaml` file without `-b` flag
 ```
+rm -rf ./nart_output
+nawf config -d ./database -w ./nart_output
 cat ./nart_output/config.yaml
 ```
 
