@@ -295,8 +295,20 @@ hybrid/pilon/pilon.fasta
 
 `unicycler` can conduct a short-read-first hybrid assembly. [[Read more]](https://github.com/rrwick/Unicycler)
 
+**It takes some time, so we will skip this step in the example. Feel free to come back to this step after you have finished the other steps.**
+
+**Linux users**
 ```
 unicycler -l ont_r10/ont_r10_20x_f.fastq.gz -1 illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz -2 illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz -o hybrid/unicycler --threads 4
+```
+
+**MacOs users**
+
+Since the latest `MacOS` version of `unicycler` on `conda` is behind [0.5.0](https://github.com/rrwick/Unicycler/releases/tag/v0.5.0),
+we append two flags of `--no_correct` and `--no_pilon` to maintain maximum compatibility.
+
+```
+unicycler --no_correct --no_pilon -l ont_r10/ont_r10_20x_f.fastq.gz -1 illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz -2 illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz -o hybrid/unicycler
 ```
 
 Expected assembly file:
@@ -361,6 +373,8 @@ You can open the `report.html` file in the `quast` directory to have a look at t
 
 High frequency of `indels` results in frameshifts in the coding sequences (CDSs) of the ONT assembly.
 With reference-guided correction, we can correct the frameshifts in the CDSs of the ONT assembly.
+
+**This step is optional, you can skip it if you don't have time.**
 
 To use the `proovframe` tool, we need to create another conda environment with `mamba` due to the dependency conflict.
 
