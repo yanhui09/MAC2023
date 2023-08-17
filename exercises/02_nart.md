@@ -67,6 +67,7 @@ nawf config -d /path/to/database                               # init config fil
 ```
 
 In common cases, you need three independent sessions to handle monitor, process and visulization, repectively.
+
 **1.** Minitor the bascall output and record
 ```
 nart monitor -q /path/to/basecall_fastq_dir                    # monitor basecall output
@@ -132,12 +133,14 @@ nawf run all -w ./nart_output -n
 ```
 rm -rf ./nart_output
 nawf config -d ./database -w ./nart_output
-cat ./nart_output/config.yaml
+head ./nart_output/config.yaml
 ```
 
-**2.2.** Monitor the bascall output and record
+{: .important }
+> Check the changes of `basecall_fq` in the `config.yaml` file. 
+
+**2.2.** Monitor the bascalling output and record
 ``` 
-ls ./nart_output
 nart monitor -q ./data/ont16s -w ./nart_output
 ```
 
@@ -152,7 +155,7 @@ In a new terminal, check the actions of `nart monitor`
 ```
 ls ./nart_output
 cat ./nart_output/fqs.txt
-zcat ./data/ont16S/*.fastq.gz | head -n500 > ./data/ont16s/new.fastq
+cp ./data/ont16s/*.fastq.gz ./data/ont16s/new.fastq.gz
 cat ./nart_output/fqs.txt
 ```
 

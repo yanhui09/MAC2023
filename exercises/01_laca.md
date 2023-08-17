@@ -100,5 +100,5 @@ cat ./laca_output/config.yaml
 **2.** Start `LACA` in a dry and real run
 ```
 laca run all -w ./laca_output -n 
-laca run all -j 4 -m 20 -w ./laca_output      
+laca run isONclustCon -j 4 -m 20 -w ./laca_output      
 ```
