@@ -112,18 +112,13 @@ mkdir illumina
 trimmomatic PE -threads 4 -phred33 data/wgs/NXT20x_R1.fastq.gz data/wgs/NXT20x_R2.fastq.gz illumina/NXT20x_R1_paired.fastq.gz illumina/NXT20x_R1_unpaired.fastq.gz illumina/NXT20x_R2_paired.fastq.gz illumina/NXT20x_R2_unpaired.fastq.gz ILLUMINACLIP:data/wgs/NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:50
 ```
 
-Expected output in `MD5` validation:
+Expected output:
 ```
-eebcb480e669a92aff310cdecc71afec  illumina/NXT20x_R1_paired.fastq.gz
-03ede64399251a7d2734a61c587b68ec  illumina/NXT20x_R1_unpaired.fastq.gz
-47dc62c9846c7bda0d4f420c64f7a766  illumina/NXT20x_R2_paired.fastq.gz
-36331358edf37d870eb69b329819a85c  illumina/NXT20x_R2_unpaired.fastq.gz
+illumina/NXT20x_R1_paired.fastq.gz
+illumina/NXT20x_R1_unpaired.fastq.gz
+illumina/NXT20x_R2_paired.fastq.gz
+illumina/NXT20x_R2_unpaired.fastq.gz
 ```
-
-{: .important }
-> `MD5` validation is a way to check if the file is downloaded correctly. [[Read more]](https://en.wikipedia.org/wiki/MD5) 
->
-> You can use `md5sum` to check the `MD5` in Linux or `md5` in Mac.
 
 #### **Reads quality control with `bbmap`**
 
@@ -140,12 +135,12 @@ clumpify.sh in=illumina/NXT20x_R1_paired.fastq.gz in2=illumina/NXT20x_R2_paired.
 bbduk.sh in=illumina/NXT20x_R1_paired_dedup.fastq.gz in2=illumina/NXT20x_R2_paired_dedup.fastq.gz out=illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz out2=illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz ref=data/wgs/phiX174.fasta k=31 hdist=1
 ```
 
-Expected output in `MD5` validation:
+Expected output:
 ```
-b60aa914d39ac6881e548fb0feeacfe6  illumina/NXT20x_R1_paired_dedup.fastq.gz
-f8173d1b4804312acb990ff7125d0b36  illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz
-a3e164e4b96954f7fb106fc6f99df37c  illumina/NXT20x_R2_paired_dedup.fastq.gz
-440f45289eb0d2a8bf60749082ef9661  illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz
+illumina/NXT20x_R1_paired_dedup.fastq.gz
+illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz
+illumina/NXT20x_R2_paired_dedup.fastq.gz
+illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz
 ```
 
 #### **Genome assembly with `spades`**  
@@ -156,9 +151,9 @@ a3e164e4b96954f7fb106fc6f99df37c  illumina/NXT20x_R2_paired_dedup.fastq.gz
 spades.py --isolate -t 4 -1 illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz -2 illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz -o illumina/spades
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly:
 ```
-0e730fd7f4742f9bd170a03b0b063806  illumina/spades/contigs.fasta
+illumina/spades/contigs.fasta
 ```
 
 {: .important }
@@ -218,9 +213,9 @@ ont_r10/ont_r10_20x_f.fastq.gz  FASTQ   DNA      6,561  48,742,515    2,001  7,4
 flye --nano-raw ont_r10/ont_r10_20x_f.fastq.gz --out-dir ont_r10/flye --threads 4
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly file:
 ```
-697328b0bcacc3870c97d79fddde9127  ont_r10/flye/assembly.fasta
+ont_r10/flye/assembly.fasta
 ```
 
 {: .important }
@@ -252,9 +247,9 @@ medaka tools list_models
 medaka_consensus -i ont_r10/ont_r10_20x_f.fastq.gz -d ont_r10/flye/assembly.fasta -o ont_r10/medaka -t 4 -m r1041_e82_260bps_hac_v4.1.0
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly file:
 ```
-590eaf8d89c66f5354075ec5dba281ab  ont_r10/medaka/consensus.fasta
+ont_r10/medaka/consensus.fasta
 ```
 
 Optional: polishing with `racon` and `medaka`
@@ -265,10 +260,10 @@ racon -t 4 ont_r10/ont_r10_20x_f.fastq.gz ont_r10/racon/flye_assembly.paf ont_r1
 medaka_consensus -i ont_r10/ont_r10_20x_f.fastq.gz -d ont_r10/racon/racon.fasta -o ont_r10/racon/medaka -t 4 -m r1041_e82_260bps_hac_v4.1.0
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly file:
 ```
-06e0814ec2fa261d4caf19bbedebc759  ont_r10/racon/racon.fasta
-8887ee7681b5b77d5d4e9527ae5dae74  ont_r10/racon/medaka/consensus.fasta
+ont_r10/racon/racon.fasta
+ont_r10/racon/medaka/consensus.fasta
 ```
 
 ### Hybrid assembly with ONT and Illumina reads
@@ -291,9 +286,9 @@ samtools index hybrid/pilon/aligned.bam
 pilon --genome ont_r10/medaka/consensus.fasta --frags hybrid/pilon/aligned.bam --output hybrid/pilon/pilon --threads 4
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly file:
 ```
-98a3f4f99d28a5b927c056ba22441720  hybrid/pilon/pilon.fasta
+hybrid/pilon/pilon.fasta
 ```
 
 #### **Optional: hybrid assembly with `unicycler`**
@@ -304,9 +299,9 @@ Expected assembly file in `MD5` validation:
 unicycler -l ont_r10/ont_r10_20x_f.fastq.gz -1 illumina/NXT20x_R1_paired_dedup_deduk.fastq.gz -2 illumina/NXT20x_R2_paired_dedup_deduk.fastq.gz -o hybrid/unicycler --threads 4
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly file:
 ```
-c8b03dac6c834c3fc296b0cf64dc7d27  hybrid/unicycler/assembly.fasta
+hybrid/unicycler/assembly.fasta
 ```
 
 ### Quality assessment of assembled genomes with `quast`
@@ -385,20 +380,20 @@ conda activate wgs2
 prokka --outdir proovframe/prokka --prefix pacbio --cpus 4 data/wgs/ncbi_pacbio_TL110.fasta
 ```
 
-Expected output with `MD5` validation:
+Expected output:
 ```
-a267a24bbd28151c716092173a2e79a1  proovframe/prokka/pacbio.err
-46d48fbdb6c704865b19cf35c795708a  proovframe/prokka/pacbio.faa
-1ab513dcf76b46beeb46f42275e65604  proovframe/prokka/pacbio.ffn
-bf6336922fd8bdffa074c8565e920678  proovframe/prokka/pacbio.fna
-63109e3ae31af589c972685508598e5f  proovframe/prokka/pacbio.fsa
-cec178cf845ecbe3e5e377270a7f5cd1  proovframe/prokka/pacbio.gbk
-9ac09d4da29f6ce7b347c63d42fa6a95  proovframe/prokka/pacbio.gff
-53220e50b2a203a3a6e803583fea542e  proovframe/prokka/pacbio.log
-68ff41f56df62d2023d86ae6159396cc  proovframe/prokka/pacbio.sqn
-1f6457787abd3853ea9b867caaebec1d  proovframe/prokka/pacbio.tbl
-66b8b6210b88f6a78a9b958034af1372  proovframe/prokka/pacbio.tsv
-7905c89035c6589718690b63d1bffeaf  proovframe/prokka/pacbio.txt
+proovframe/prokka/pacbio.err
+proovframe/prokka/pacbio.faa
+proovframe/prokka/pacbio.ffn
+proovframe/prokka/pacbio.fna
+proovframe/prokka/pacbio.fsa
+proovframe/prokka/pacbio.gbk
+proovframe/prokka/pacbio.gff
+proovframe/prokka/pacbio.log
+proovframe/prokka/pacbio.sqn
+proovframe/prokka/pacbio.tbl
+proovframe/prokka/pacbio.tsv
+proovframe/prokka/pacbio.txt
 ```
 
 We have many output files from `prokka`. Here we only use the translated protein sequences (`./proovframe/prokka/pacbio.faa` file) for `proovframe`.
@@ -415,9 +410,9 @@ proovframe map -a proovframe/prokka/pacbio.faa -o proovframe/pilon.tsv hybrid/pi
 proovframe fix -o proovframe/pilon_corrected.fasta hybrid/pilon/pilon.fasta proovframe/pilon.tsv
 ```
 
-Expected assembly file in `MD5` validation:
+Expected assembly file:
 ```
-3d1a8a553caa5370e4ba592b088bc535  proovframe/pilon_corrected.fasta
+proovframe/pilon_corrected.fasta
 ```
 
 {: .important }
