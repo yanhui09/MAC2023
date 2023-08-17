@@ -48,7 +48,7 @@ Activate the environment for the following analysis.
 conda activate wgs1
 ```
 
-## Exporation with a demo data
+## Exploration with a demo data
 
 The WGS data can be fetched from [MAC2023-extra](https://github.com/yanhui09/MAC2023-extra) as before.
 You shall download the data already if you have completed the previous exercises. In case you haven't, you can refer to the [requisites](https://yanhui09.github.io/MAC2023/exercieses/requisites) section.   
