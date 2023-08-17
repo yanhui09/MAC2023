@@ -58,6 +58,6 @@ git clone https://github.com/yanhui09/MAC2023-extra.git
 ### Snakemake
 [Snakemake](https://snakemake.readthedocs.io/en/stable/) is a workflow management system that aims to reduce the complexity of creating workflows by providing a fast and comfortable execution environment, together with a clean and modern specification language in python style.
 
-[LACA](https://github.com/yanhui09/laca) and [NART](https://github.com/yanhui09/nart) are two pipelines based on `snakemake`. If you are familiar with [Snakemake](https://snakemake.readthedocs.io/en/stable/), you may have a better understanding of the phylosophy behind these pipelines.
+[LACA](https://github.com/yanhui09/laca) and [NART](https://github.com/yanhui09/nart) are two pipelines based on `snakemake`. If you are familiar with [snakemake](https://snakemake.readthedocs.io/en/stable/), you will have a better understanding of the phylosophy behind these pipelines.
   
 You can read more about `snakemake` in the [official document](https://snakemake.readthedocs.io/en/stable/).

@@ -24,20 +24,20 @@ schedule:
     events:
       - name: Lecture (YH)
         start: 1:00 PM
-        end: 1:45 PM
+        end: 1:30 PM
         location: A2-82.01 opgang 6
       - name: Exercise (YH)
-        start: 2:00 PM
+        start: 1:45 PM
         end: 4:00 PM
         location: A2-82.01 opgang 6
   - name: Wednesday
     events:
       - name: Lecture (FMP&YH)
         start: 1:00 PM
-        end: 1:45 PM
+        end: 1:30 PM
         location: A2-82.01 opgang 6
       - name: Exercise (FMP&YH)
-        start: 2:00 PM
+        start: 1:45 PM
         end: 4:00 PM
         location: A2-82.01 opgang 6
   - name: Thursday
