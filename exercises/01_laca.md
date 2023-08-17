@@ -93,7 +93,7 @@ cd ./MAC2023-extra
 **1.** Check where you are and try `laca init`, check the genereated `config.yaml` file.
 ```
 pwd
-laca init -b ./data/ont16s -d ./database -w ./laca_output
+laca init -b ./data/ont16s -d ./database -w ./laca_output --fqs-min 50
 cat ./laca_output/config.yaml
 ```
 
