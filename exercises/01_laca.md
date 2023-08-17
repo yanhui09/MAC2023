@@ -22,12 +22,9 @@ The full installation guide of `LACA` is available [here](https://github.com/yan
 ```
 git clone https://github.com/yanhui09/laca.git
 cd laca
-conda env create -n laca -f env.yaml 
-```
-You can speed up the whole process if [`mamba`](https://github.com/mamba-org/mamba) is installed.
-```
 mamba env create -n laca -f env.yaml 
 ```
+
 **2.** Install `LACA` with `pip`
       
 To avoid inconsistency, we suggest installing `LACA` in the above `conda` environment
@@ -40,7 +37,7 @@ pip install --editable .
 
 Find a full usage guide [here](https://github.com/yanhui09/laca#usage).
 
-### Example
+### Example with a quick start
 ```
 conda activate laca                                  # activate required environment 
 laca init -b /path/to/basecalled_fastqs -d /path/to/database    # init config file and check
