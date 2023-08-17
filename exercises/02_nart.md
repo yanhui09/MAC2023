@@ -24,6 +24,9 @@ nav_order: 3
 
 The full installation guide of `NART` is available [here](https://github.com/yanhui09/nart#installation).
 
+**`NART` requires [`singularity`](https://en.wikipedia.org/wiki/Singularity_(software)) to use `guppy` in a visual container.**
+**Since `singularity` is built for platform, `LACA` couldn't provide further support for `MacOS` users.**
+
 **1.** Clone the Github repository and create an isolated `conda` environment
 ```
 git clone https://github.com/yanhui09/nart.git

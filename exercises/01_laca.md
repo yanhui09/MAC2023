@@ -12,11 +12,14 @@ nav_order: 2
 ---
 ## *De novo* OTU picking from long noisy amplicons with **LACA** 
 
-[`LACA`](https://github.com/yanhui09/laca) is a reproducible and scalable workflow for Long Amplicon Consensus Analysis, e.g., 16S rRNA gene. Using Snakemake as the job controller.
+[`LACA`](https://github.com/yanhui09/laca) is a reproducible and scalable workflow for Long Amplicon Consensus Analysis, e.g., 16S rRNA gene amplicon analysis. It uses `snakemake` to manage the workflow and `conda` to manage the environment.
 
 ## **LACA** installation
 
 The full installation guide of `LACA` is available [here](https://github.com/yanhui09/laca#installation).
+
+**`LACA` requires [`singularity`](https://en.wikipedia.org/wiki/Singularity_(software)) to use `guppy` in a visual container.**
+**Since `singularity` is built for platform, `LACA` couldn't provide further support for `MacOS` users.**
 
 **1.** Clone the Github repository and create an isolated `conda` environment
 ```
