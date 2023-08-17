@@ -162,7 +162,7 @@ cat ./nart_output/fqs.txt
 `nart run` stores the batch-specific count matrix under the folder `batches`. 
 And the merged table (`out_table.tsv`) is updated iteratively when a new matrix is created. 
 
-When you see one `out_table.tsv` in the output folder, i.e., `nart_output/`,
+While you see one `out_table.tsv` in the output folder, i.e., `nart_output/`,
 you can try the interactive visualization below.
 
 **2.4.** Interactive visualization in a browser (requiring a new terminal)
@@ -170,4 +170,4 @@ you can try the interactive visualization below.
 nart visual -i ./nart_output
 ```
 
-Open the generated link in your browser. And you are expected to see
+Open the generated link in your browser. And you are expected to see an interactive barplot as below.
