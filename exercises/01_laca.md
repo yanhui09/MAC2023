@@ -100,7 +100,7 @@ cat ./laca_output/config.yaml
 **2.** Start `LACA` in a dry and real run
 ```
 laca run all -w ./laca_output -n 
-laca run kmerCon -j 4 -m 20 -w ./laca_output      
+laca run kmerCon -j 4 -w ./laca_output      
 ```
 
 `LACA` is able to generate `otu table`, `taxonomy table` and `phylogenetic tree` if you run the full workflow with `laca run all`. But it takes time to prepare the database and installation for the first use. 
