@@ -39,6 +39,18 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforg
 bash Mambaforge-Linux-x86_64.sh
 ```
 
+### Docker
+
+[Docker](https://www.docker.com/) is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. 
+
+You can consider it as a virtual machine, but it is much faster and lighter than virtual machine.
+
+To install `docker`, please refer to the [official document](https://docs.docker.com/get-docker/).
+
+{: .imaportant }
+> Due to the software dependencies (e.g., `singularity`, `seqkit`), [`LACA`](https://github.com/yanhui09/laca) and [`NART`](https://github.com/yanhui09/nart) are built and tested on [`linux/amd64`](https://en.wikipedia.org/wiki/X86-64) only.
+> If you are using other systems, please use `docker` to run the pipelines.
+
 ### Exercise data
 
 Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https://github.com/yanhui09/MAC2023-extra).

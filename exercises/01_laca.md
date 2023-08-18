@@ -16,10 +16,25 @@ nav_order: 2
 
 ## **LACA** installation
 
-The full installation guide of `LACA` is available [here](https://github.com/yanhui09/laca#installation).
+The full installation guide of `LACA` is available [here](https://github.com/yanhui09/laca).
 
-**`LACA` requires [`singularity`](https://en.wikipedia.org/wiki/Singularity_(software)) to use `guppy` in a visual container.**
-**Since `singularity` is built for platform, `LACA` couldn't provide further support for `MacOS` users.**
+### Docker image
+
+The easiest way to use `LACA` is to pull the `docker` image from [Docker Hub](https://hub.docker.com/r/yanhui09/laca) for cross-platform support.
+```
+docker pull yanhui09/laca
+```
+
+{: .important }
+> `LACA` is built for `linux/amd64` platform, with cross-platform support through `docker`. 
+> `MacOS` users needs to use docker container to run `LACA`.
+
+**To use the docker image**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
+```
+docker run -it -v `pwd`:/home --privileged yanhui09/laca
+```
+
+### Installation from GitHub repository
 
 **1.** Clone the Github repository and create an isolated `conda` environment
 ```

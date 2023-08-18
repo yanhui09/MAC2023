@@ -22,10 +22,27 @@ nav_order: 3
 
 ## **NART** installation
 
-The full installation guide of `NART` is available [here](https://github.com/yanhui09/nart#installation).
+The full installation guide of `NART` is available [here](https://github.com/yanhui09/nart).
 
-**`NART` requires [`singularity`](https://en.wikipedia.org/wiki/Singularity_(software)) to use `guppy` in a visual container.**
-**Since `singularity` is built for platform, `LACA` couldn't provide further support for `MacOS` users.**
+### Docker image
+
+The easiest way to use `NART` is to pull the `docker` image from [Docker Hub](https://hub.docker.com/r/yanhui09/nart) for cross-platform support.
+```
+docker pull yanhui09/nart
+```
+
+**To use the docker image**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
+```
+docker run -it -v `pwd`:/home --network host --privileged yanhui09/nart
+```
+
+{: .important }
+> `NART` is built for `linux/amd64` platform, with cross-platform support through `docker`. 
+> `MacOS` users needs to use docker container to run `NART`.
+>
+> **Note: `--network host` is required for `nart monitor` to work.**
+
+### Installation from GitHub repository
 
 **1.** Clone the Github repository and create an isolated `conda` environment
 ```
@@ -172,3 +189,7 @@ nart visual -i ./nart_output
 
 Open the generated link in your browser. And you are expected to see an interactive barplot as below.
 ![visual](./assets/02_nart/visual.png)
+
+{: .important }
+> **`MacOs` user couldn't experience `nart visual` through `docker`. :(**
+> The host networking driver only works on Linux hosts, and is not supported on Docker Desktop for Mac, Docker Desktop for Windows, or Docker EE for Windows Server. [[Read more]](https://docs.docker.com/network/drivers/host/)

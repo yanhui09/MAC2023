@@ -16,4 +16,6 @@ This website is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GENERA
 
 2) WGS data analysis with Nanopore and Illumina sequencing data
 
-As most bioinformatic software only have `linux` distribution, a `Linux` environment is recommended.
+As most bioinformatic software only have `linux/amd64` distribution, a `Linux/amd64` environment is recommended.
+
+For cross-platform support including `MacOS`, we recommend using `docker`.
