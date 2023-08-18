@@ -52,7 +52,7 @@ Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https
 
 Here we mainly use `git clone` to download the exercise data.
 ```
-git clone https://github.com/yanhui09/MAC2023-extra.git
+git clone --depth 1 https://github.com/yanhui09/MAC2023-extra.git
 ```
 
 ### Snakemake

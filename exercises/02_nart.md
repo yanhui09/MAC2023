@@ -171,3 +171,4 @@ nart visual -i ./nart_output
 ```
 
 Open the generated link in your browser. And you are expected to see an interactive barplot as below.
+![visual](./assets/02_nart/visual.png)
