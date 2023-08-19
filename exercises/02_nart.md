@@ -24,6 +24,8 @@ nav_order: 3
 
 The full installation guide of `NART` is available [here](https://github.com/yanhui09/nart).
 
+You can choose to install `NART` with `docker` image (which is only solution for `MacOS` users) or from the `GitHub` repository according to your `OS` and preference.
+
 ### Docker image
 
 The easiest way to use `NART` is to pull the `docker` image from [Docker Hub](https://hub.docker.com/r/yanhui09/nart) for cross-platform support.

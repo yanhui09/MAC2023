@@ -15,7 +15,13 @@ This section provides the requisites for the exercises, as well as some optional
 
 ## Requirements
 
+### Exercise data
+
+Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https://github.com/yanhui09/MAC2023-extra).
+![download](./assets/00_requisites/github_download.jpg)
+
 ### Conda & Mamba
+![conda_mamba](./assets/00_requisites/conda_mamba.png)
 
 [Conda](https://docs.conda.io/en/latest/) is a package manager that allows you to install, run, and update packages and their dependencies. It is a very useful tool to manage your analysis environment. 
 
@@ -40,6 +46,7 @@ bash Mambaforge-Linux-x86_64.sh
 ```
 
 ### Docker
+![docker](./assets/00_requisites/docker.png)
 
 [Docker](https://www.docker.com/) is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. 
 
@@ -51,14 +58,34 @@ To install `docker`, please refer to the [official document](https://docs.docker
 > Due to the software dependencies (e.g., `singularity`, `seqkit`), [`LACA`](https://github.com/yanhui09/laca) and [`NART`](https://github.com/yanhui09/nart) are built and tested on [`linux/amd64`](https://en.wikipedia.org/wiki/X86-64) only.
 > If you are using other systems, please use `docker` to run the pipelines.
 
-### Exercise data
+#### Basic usage
 
-Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https://github.com/yanhui09/MAC2023-extra).
-![download](./assets/00_requisites/github_download.jpg)
+To run a `docker` container, you simply need two steps:
+
+1. Pull the image from [Docker Hub](https://hub.docker.com/).
+2. Run a container with the downloaded image.
+
+Here we use `LACA` as an example.
+
+**To pull a `docker` image**, you can use the following command:
+
+```
+docker pull yanhui09/laca
+```
+
+**To start a `docker` docker**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
+
+Assuming your data is in the current directory `pwd`, you can run a `docker` container:
+```
+docker run -it -v `pwd`:/home --privileged yanhui09/laca
+```
+
+**To exit a `docker` container**, you can use `Ctrl + D` or `exit` command.
 
 ## Optional reading
 
 ### Git
+![git](./assets/00_requisites/git.png)
 
 [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. It is very useful to manage your code and analysis.
 
@@ -68,6 +95,8 @@ git clone --depth 1 https://github.com/yanhui09/MAC2023-extra.git
 ```
 
 ### Snakemake
+![snakemake](./assets/00_requisites/snakemake.png)
+
 [Snakemake](https://snakemake.readthedocs.io/en/stable/) is a workflow management system that aims to reduce the complexity of creating workflows by providing a fast and comfortable execution environment, together with a clean and modern specification language in python style.
 
 [LACA](https://github.com/yanhui09/laca) and [NART](https://github.com/yanhui09/nart) are two pipelines based on `snakemake`. If you are familiar with [snakemake](https://snakemake.readthedocs.io/en/stable/), you will have a better understanding of the phylosophy behind these pipelines.

@@ -18,6 +18,8 @@ nav_order: 2
 
 The full installation guide of `LACA` is available [here](https://github.com/yanhui09/laca).
 
+You can choose to install `LACA` with `docker` image (which is only solution for `MacOS` users) or from the `GitHub` repository according to your `OS` and preference.
+
 ### Docker image
 
 The easiest way to use `LACA` is to pull the `docker` image from [Docker Hub](https://hub.docker.com/r/yanhui09/laca) for cross-platform support.
