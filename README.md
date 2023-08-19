@@ -1,5 +1,7 @@
 # MAC2023
 
+[![pages-build-deployment](https://github.com/yanhui09/MAC2023/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/yanhui09/MAC2023/actions/workflows/pages/pages-build-deployment)
+
 This repository is part of the course "MICROBIOME ANALYSIS USING 2ND AND 3RD GENERATION DNA SEQUENCING - 2023" (MAC2023) at the University of Copenhagen.
 
 **The course GitHub pages**: [https://yanhui09.github.io/MAC2023](https://yanhui09.github.io/MAC2023)

@@ -11,7 +11,7 @@ nav_order: 3
 
 ---
 
-## Use **NART** for long noisy amplicon profile by read classification
+## Use **NART** for long amplicon profiling by read classification
 
 [`NART`](https://github.com/yanhui09/nart) is desgined for mapping-based Nanopore Amplicon (**Real-Time**) analysis, e.g., 16S rRNA gene.
 `NART` utils are composed of `nart` (Nanopore Amplicon Real-Time entry) and `nawf` (Nanopore Amplicon `snakemake` WorkFlow entry) in one python package.
