@@ -165,6 +165,10 @@ illumina/spades/contigs.fasta
 
 #### **Optional: Adapter removal with `guppy` or `porechop`**
 
+{: .important }
+> Intallation of `guppy` and `porechop` are not provided in this exercise.
+> Try to install them by yourself if you want to use them. 
+
 `guppy` is a tool for basecalling and adapter trimming of ONT reads. 
 `guppy` is not open-source, thus you need to register an ONT account for documentation and download. [[Read more]](https://id.customers.nanoporetech.com/app/nanoporetech-customers_myaccount_1/exk2kkmfwpBAaT3WI697/sso/saml?RelayState=https://community.nanoporetech.com/downloads)
 
