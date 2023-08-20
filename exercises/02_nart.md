@@ -33,11 +33,6 @@ The easiest way to use `NART` is to pull the `docker` image from [Docker Hub](ht
 docker pull yanhui09/nart
 ```
 
-**To use the docker image**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
-```
-docker run -it -v `pwd`:/home --network host --privileged yanhui09/nart
-```
-
 {: .important }
 > `NART` is built for `linux/amd64` platform, with cross-platform support through `docker`. 
 > `MacOS` users needs to use docker container to run `NART`.
@@ -71,7 +66,6 @@ A video tutorial can be found [here](https://www.youtube.com/watch?v=TkdJGLOscPg
 #### Amplicon analysis in single batch
 `nawf` can be used to profile any single basecalled `fastq` file from a Nanopore run or batch.
 ```
-conda activate nart                                            # activate required environment 
 nawf config -b /path/to/basecall_fastq -d /path/to/database    # init config file and check
 nawf run all                                                   # start analysis
 ```
@@ -81,7 +75,6 @@ nawf run all                                                   # start analysis
 
 Before starting real-time analysis, you need `nawf` to configure the workflow according to your needs. 
 ```
-conda activate nart                                            # activate required environment 
 nawf config -d /path/to/database                               # init config file and check
 ```
 
@@ -104,16 +97,18 @@ nart visual                                                    # interactive vis
 
 `NART` is composed of two sets of scripts: `nart` and `nawf`, which controls real-time analysis and workflow performance, respectively.
 
-Remember to activate the conda environment.
+Remember to activate the conda environment if `NART` is installed in a `conda` environment.
 ```
 conda activate nart
 nawf -h
-nawf config -h
-nawf run -h
 nart -h
-nart monitor -h
-nart run -h
-nart visual -h
+```
+
+**To use the docker image**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
+```
+docker run -it -v `pwd`:/home --network host --privileged yanhui09/nart
+nawf -h
+nart -h
 ```
 
 ### Run `NART` with a demo datset
@@ -163,25 +158,28 @@ head ./nart_output/config.yaml
 nart monitor -q ./data/ont16s -w ./nart_output
 ```
 
+`nart monitor` creates a `fqs.txt` in the working directory to record the coming `fastq` files.
+
 **2.3.** Start amplicon analysis (requiring a new terminal)
 ```
 nart run -t 4 -w ./nart_output
 ```
 
-`nart monitor` creates a `fqs.txt` in the working directory to record the coming `fastq` files.
-
-In a new terminal, check the actions of `nart monitor`
-```
-ls ./nart_output
-cat ./nart_output/fqs.txt
-cp ./data/ont16s/*.fastq.gz ./data/ont16s/new.fastq.gz
-cat ./nart_output/fqs.txt
-```
-
+{: .important }
+> In a new terminal, check the actions of `nart monitor`
+> ```
+> ls ./nart_output
+> cat ./nart_output/fqs.txt
+> cp ./data/ont16s/*.fastq.gz ./data/ont16s/new.fastq.gz
+> cat ./nart_output/fqs.txt
+> ```
+> 
+> Check the changes of content in the `fqs.txt` file. 
+ 
 `nart run` stores the batch-specific count matrix under the folder `batches`. 
-And the merged table (`out_table.tsv`) is updated iteratively when a new matrix is created. 
+And the merged table (`otu_table.tsv`) is updated iteratively when a new matrix is created.
 
-While you see one `out_table.tsv` in the output folder, i.e., `nart_output/`,
+While you see one `otu_table.tsv` in the output folder, i.e., `nart_output/`,
 you can try the interactive visualization below.
 
 **2.4.** Interactive visualization in a browser (requiring a new terminal)
@@ -193,5 +191,6 @@ Open the generated link in your browser. And you are expected to see an interact
 ![visual](./assets/02_nart/visual.png)
 
 {: .important }
-> **`MacOs` user couldn't experience `nart visual` through `docker`. :(**
+> **`MacOS` user couldn't experience `nart visual` through `docker`. :(**
+>
 > The host networking driver only works on Linux hosts, and is not supported on Docker Desktop for Mac, Docker Desktop for Windows, or Docker EE for Windows Server. [[Read more]](https://docs.docker.com/network/drivers/host/)

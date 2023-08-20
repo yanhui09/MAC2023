@@ -31,11 +31,6 @@ docker pull yanhui09/laca
 > `LACA` is built for `linux/amd64` platform, with cross-platform support through `docker`. 
 > `MacOS` users needs to use docker container to run `LACA`.
 
-**To use the docker image**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
-```
-docker run -it -v `pwd`:/home --privileged yanhui09/laca
-```
-
 ### Installation from GitHub repository
 
 **1.** Clone the Github repository and create an isolated `conda` environment
@@ -59,7 +54,6 @@ Find a full usage guide [here](https://github.com/yanhui09/laca#usage).
 
 ### Example with a quick start
 ```
-conda activate laca                                  # activate required environment 
 laca init -b /path/to/basecalled_fastqs -d /path/to/database    # init config file and check
 laca run all                                         # start analysis
 ```
@@ -68,9 +62,15 @@ laca run all                                         # start analysis
 
 `LACA` is easy to use. You can start a new analysis in two steps using `laca init` and `laca run` . 
 
-Remember to activate the conda environment.
+Remember to activate the conda environment if `LACA` is installed in a `conda` environment.
 ```
 conda activate laca
+laca -h
+```
+
+**To use the docker image**, you need to mount your data directory, e.g., `pwd`, to the  `/home` in the container.
+```
+docker run -it -v `pwd`:/home --privileged yanhui09/laca
 laca -h
 ```
 
