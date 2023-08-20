@@ -35,9 +35,8 @@ docker pull yanhui09/nart
 
 {: .important }
 > `NART` is built for `linux/amd64` platform, with cross-platform support through `docker`. 
-> `MacOS` users needs to use docker container to run `NART`.
 >
-> **Note: `--network host` is required for `nart monitor` to work.**
+> `MacOS` users needs to use docker container to run `NART`.
 
 ### Installation from GitHub repository
 
@@ -97,7 +96,7 @@ nart visual                                                    # interactive vis
 
 `NART` is composed of two sets of scripts: `nart` and `nawf`, which controls real-time analysis and workflow performance, respectively.
 
-Remember to activate the conda environment if `NART` is installed in a `conda` environment.
+Remember to activate the `conda` environment if `NART` is installed in a `conda` environment.
 ```
 conda activate nart
 nawf -h
@@ -110,6 +109,9 @@ docker run -it -v `pwd`:/home --network host --privileged yanhui09/nart
 nawf -h
 nart -h
 ```
+
+{: .important }
+> **Note: `--network host` is required for `nart monitor` to work.**
 
 ### Run `NART` with a demo datset
 

@@ -29,6 +29,7 @@ docker pull yanhui09/laca
 
 {: .important }
 > `LACA` is built for `linux/amd64` platform, with cross-platform support through `docker`. 
+>
 > `MacOS` users needs to use docker container to run `LACA`.
 
 ### Installation from GitHub repository
@@ -62,7 +63,7 @@ laca run all                                         # start analysis
 
 `LACA` is easy to use. You can start a new analysis in two steps using `laca init` and `laca run` . 
 
-Remember to activate the conda environment if `LACA` is installed in a `conda` environment.
+Remember to activate the `conda` environment if `LACA` is installed in a `conda` environment.
 ```
 conda activate laca
 laca -h
