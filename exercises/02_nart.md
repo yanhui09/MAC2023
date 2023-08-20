@@ -62,14 +62,14 @@ Find a full usage guide [here](https://github.com/yanhui09/nart#usage).
 A video tutorial can be found [here](https://www.youtube.com/watch?v=TkdJGLOscPg).
 
 ### Example with a quick start
-#### Amplicon analysis in single batch
+#### **Amplicon analysis in single batch**
 `nawf` can be used to profile any single basecalled `fastq` file from a Nanopore run or batch.
 ```
 nawf config -b /path/to/basecall_fastq -d /path/to/database    # init config file and check
 nawf run all                                                   # start analysis
 ```
 
-#### Real-time analysis
+#### **Real-time analysis**
 `nart` provide utils to record, process and profile the continuously generated `fastq` batch.
 
 Before starting real-time analysis, you need `nawf` to configure the workflow according to your needs. 
@@ -129,7 +129,7 @@ git clone https://github.com/yanhui09/MAC2023-extra.git
 cd ./MAC2023-extra 
 ```
 
-**1.** Analyze a finished ONT run with `nawf`
+#### **1. Analyze an accomplished ONT run with `nawf`**
 
 **1.1.** Check where you are and try `laca init`, check the genereated `config.yaml` file.
 ```
@@ -143,7 +143,7 @@ cat ./nart_output/config.yaml
 nawf run all -w ./nart_output -n
 ```
 
-**2.** Real-time analysis with `nart`
+#### **2. Real-time analysis with `nart`**
 
 **2.1.** Re-generate the `config.yaml` file without `-b` flag
 ```
