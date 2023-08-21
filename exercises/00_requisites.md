@@ -25,12 +25,12 @@ Excerise data can be access at [https://github.com/yanhui09/MAC2023-extra](https
 
 [Conda](https://docs.conda.io/en/latest/) is a package manager that allows you to install, run, and update packages and their dependencies. It is a very useful tool to manage your analysis environment. 
 
-[Mamba](https://github.com/mamba-org/mamba) is a reimplementation of the conda package manager in C++. It is much faster than conda, and is recommended for large-scale analysis.
+[Mamba](https://github.com/mamba-org/mamba) is a reimplementation of the `conda` package manager in C++. It is much faster than `conda`, and is recommended for large-scale analysis.
 
 To speed up the analysis, `mamba` is introduced here as a fast alternative for `conda`.
 
 Assuming you have installed `conda` in previous sessions, here we only introduce how to install `mamba`.
-If you still want to use `conda`, you can replace `mamba` with `conda` in the following commands.
+If you still want to use `conda`, you can replace `mamba` with `conda` in usage.
 
 To install `mamba`, please refer to the [official document](https://mamba.readthedocs.io/en/latest/mamba-installation.html#mamba-install).
 
@@ -38,7 +38,7 @@ Here we recommend *fresh install* rather *conda install*.
 It's easy to install with [Mambaforge distribution](https://github.com/conda-forge/miniforge#mambaforge).
 Find the right distribution for your system, download and install it.
 
-For X86_64 Linux, you can use the following command to install `mamba`:
+For [`X86_64`](https://en.wikipedia.org/wiki/X86-64) Linux platform, you can use the following command to install `mamba`:
 
 ```
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
@@ -58,7 +58,7 @@ To install `docker`, please refer to the [official document](https://docs.docker
 > Due to the software dependencies (e.g., `singularity`, `seqkit`), [`LACA`](https://github.com/yanhui09/laca) and [`NART`](https://github.com/yanhui09/nart) are built and tested on [`linux/amd64`](https://en.wikipedia.org/wiki/X86-64) only.
 > If you are using other systems, please use `docker` to run the pipelines.
 
-#### Basic usage
+#### **Basic usage**
 
 To run a `docker` container, you simply need two steps:
 

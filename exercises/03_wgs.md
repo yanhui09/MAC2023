@@ -28,9 +28,9 @@ docker pull yanhui09/mac2023_extra
 
 ### Installation with `mamba`
 
-It's recommended to install the software with `mamba` in a **independent** conda environment.
+It's recommended to install the software with `mamba` in an **independent** `conda` environment.
 
-Assuming you have installed `mamba` in your system, you can create a new conda environment with `mamba` and install the software with the following commands:
+Assuming you have installed `mamba` in your system, you can create a new `conda` environment with `mamba` and install the software with the following commands:
 
 Go to the downloaded data directory. *Make sure you know where you are in the terminal.*
 
@@ -46,7 +46,7 @@ You shall see the path of the downloaded data directory as below.
 /home/username/MAC2023-extera
 ```
 
-Now you can create a new conda environment with `mamba` and install the software with the following commands:
+Now you can create a new `conda` environment with `mamba` and install the software with the following commands:
 
 ```
 mamba env create -n wgs1 -f envs/env1.yaml
@@ -390,7 +390,7 @@ With reference-guided correction, we can correct the frameshifts in the CDSs of 
 
 **This step is optional, you can skip it if you don't have time.**
 
-To use the `proovframe` tool, we need to create another conda environment with `mamba` due to the dependency conflict.
+To use the `proovframe` tool, we need to create another `conda` environment with `mamba` due to the dependency conflict.
 
 ```
 conda deactivate
