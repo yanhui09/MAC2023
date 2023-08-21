@@ -16,7 +16,17 @@ nav_order: 4
 In this session, we aim to assemble a bacterial genome using 2nd and 3rd whole genome sequencing (WGS) data. 
 We will use it this as example to explore the WGS data analysis, and look into the difference between sequencing technologies.
 
-## Software installation with `mamba`
+## Software installation
+
+### Docker image
+
+You can pull the image from [DockerHub](https://hub.docker.com/r/yanhui09/mac2023_extra) with the following command:
+
+```
+docker pull yanhui09/mac2023_extra
+```
+
+### Installation with `mamba`
 
 It's recommended to install the software with `mamba` in a **independent** conda environment.
 
