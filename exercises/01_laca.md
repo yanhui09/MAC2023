@@ -127,7 +127,7 @@ As an example, here we only run the `kmerCon` module to extract consensus sequen
 
 Take a look at these consensus sequences, take the first one for [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) search against `rRNA/ITS` database.
 ```
-head -n2 ./laca_output/kmerCon/kmerCon.fasta
+head -n2 ./laca_output/kmerCon/kmerCon.fna
 ```
 
 Expected output:
